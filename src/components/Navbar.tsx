@@ -1,16 +1,20 @@
-import React from "react";
-
-export default function navbar() {
+çexport default function navbar() {
   return (
-    <div className="border-red-800 text-red-800 font- border-2 h-10 w-full margin-5 rounded-lg p-3 flex justify-around items-center">
+    <div className="text-red_400 bg-red_400/20 sm:text-xs md:text-xl lg:text-2xl  font-headline shadow-lg h-10 w-4/5 rounded-full p-3 flex justify-around items-center">
       <a href="#">
-        <p>Random Number</p>
+        <p className="hover:text-red_300 hover:scale-110 transform">
+          Random Number
+        </p>
       </a>
       <a href="#">
-        <p>Coin Flip</p>
+        <p className="hover:text-red_300 hover:scale-110 transform">
+          Coin Flip
+        </p>
       </a>
       <a href="#">
-        <p>Decision Wheel</p>
+        <p className="hover:text-red_300 hover:scale-110 transform">
+          Decision Wheel
+        </p>
       </a>
     </div>
   );
