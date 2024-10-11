@@ -1,8 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import { Suspense } from "react";
 import RandomNumber from "./components/RandomNumber";
+import CoinFilp from "./components/CoinFilp";
 
 function Placeholder() {
   return (
@@ -41,10 +42,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Placeholder />} />
             <Route path="/random-number" element={<RandomNumber />} />
-            <Route
-              path="/coin-flip"
-              element={<div>Coin Flip Component (später)</div>}
-            />
+            <Route path="/coin-flip" element={<CoinFilp />} />
             <Route
               path="/decision-wheel"
               element={<div>Decision Wheel Component (später)</div>}

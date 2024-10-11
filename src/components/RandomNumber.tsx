@@ -16,7 +16,7 @@ export default function RandomNumber() {
         Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
       setRandomNumber(randomNum);
     } else {
-      alert("Minimum muss kleiner oder gleich Maximum sein.");
+      alert("Minimum must be smaller than Maximum.");
     }
   };
 
