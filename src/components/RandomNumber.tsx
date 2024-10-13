@@ -44,7 +44,7 @@ export default function RandomNumber() {
 
   return (
     <div className="w-4/5 bg-red-300/80 rounded-xl shadow-lg p-10 mt-10 flex flex-col items-center justify-center gap-10">
-      <div className="flex gap-10">
+      <div className="flex gap-5 flex-wrap">
         <form className="max-w-sm mx-auto">
           <label
             htmlFor="min-input"
