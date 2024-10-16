@@ -28,7 +28,7 @@ export default function Navbar() {
           </Link>
           <Link
             className="hover:text-red_300 hover:scale-110 transform pr-5"
-            to="#"
+            to="/password-generator"
           >
             Password Generator
           </Link>
