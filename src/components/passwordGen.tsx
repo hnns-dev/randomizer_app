@@ -34,11 +34,11 @@ export default function () {
   return (
     <form
       onSubmit={generatePassword}
-      className="w-4/5 bg-red_300/80 rounded-xl shadow-lg p-10 mt-10 flex flex-col lg:flex-row items-center justify-center gap-5"
+      className="w-4/5 bg-red_300/80 rounded-xl shadow-lg p-10 mt-10 flex flex-col items-center justify-center gap-5"
     >
-      <div className="font-main text-red_900">
-        <label htmlFor="include-uppercase">
-          Include Uppercase Letters:
+      <div className="font-main text-red_900 gap-4 grid grid-cols-1 lg:grid-cols-2 ">
+        <label htmlFor="include-uppercase" className="flex gap-2">
+          Include Uppercase Letters
           <input
             // style later
             // className=" appearance-none w-3 h-3 rounded-sm border border-red_800 bg-red_200"
@@ -49,8 +49,8 @@ export default function () {
             onChange={() => setIncludeUppercase(!includeUppercase)}
           />
         </label>
-        <label htmlFor="include-special-chars">
-          Include Special Letters:
+        <label htmlFor="include-special-chars" className="flex gap-2">
+          Include Special Letters
           <input
             type="checkbox"
             id="include-special-chars"
@@ -59,8 +59,8 @@ export default function () {
             onChange={() => setIncludeSpecialChars(!includeSpecialChars)}
           />
         </label>
-        <label htmlFor="include-numbers">
-          Include Numbers:
+        <label htmlFor="include-numbers" className="flex gap-2">
+          Include Numbers
           <input
             type="checkbox"
             id="include-numbers"
@@ -69,21 +69,21 @@ export default function () {
             onChange={() => setIncludeNumbers(!includeNumbers)}
           />
         </label>
-        <label>
-          Password Length:
+        <label className="flex gap-2">
+          Password Length
           <input
             type="range"
             name="pw-range"
             id="pw-range"
             min="4"
-            max="35"
+            max="30"
             value={passwordLength}
             onChange={(e) => setPasswordLength(parseInt(e.target.value))}
           />
-          <p>{passwordLength}</p>
+          <div className="w-8 text-center">{passwordLength}</div>
         </label>
       </div>
-      <div className="font-headline text-2xl text-red_800 bg-red_300 p-5 rounded-lg w-full">
+      <div className="font-main sm:text-lg md:text-2xl text-red_800 bg-red_300 p-5 rounded-lg w-full text-center">
         {password}
       </div>
       <div className="w-full flex gap-4 justify-center">
